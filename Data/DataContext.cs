@@ -29,7 +29,7 @@ namespace Portfolio_backend_service.Data
                     .HasForeignKey(p => p.PokemonId);
             modelBuilder.Entity<PokemonCategory>()
                     .HasOne(p => p.Category)
-                    .WithMany(pc => pc.pokemonCategories)
+                    .WithMany(pc => pc.PokemonCategories)
                     .HasForeignKey(c => c.CategoryId);
 
             modelBuilder.Entity<PokemonOwner>()
